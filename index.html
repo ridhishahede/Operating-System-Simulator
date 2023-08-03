@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>OS Simulator</title>
+    <link rel="stylesheet" href="Index/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background-color: rgb(7, 85, 19);opacity: 1;">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">OS Simulator</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#pschedule">Process Scheduling</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#psync">Process synchronization</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#bankers">Banker's algorithm</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#memmanage">Memory management</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#pagerepl">Page replacement</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#diskschedule">Disk scheduling</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#filealloc">File allocation</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#threadsync">Thread Synchronization</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#filemanage">File management</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#syscalls">System Calls</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#ipc">Inter Process Communication</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="page-top" style="background-image: url(&quot;Index/assets/img/bg.png&quot;);background-color: #798c1b;height: 1072.76px;">
+      <div class="container" style="color: rgb(255,255,255);">
+        <!-- Start: 1 Row 2 Columns -->
+        <div>
+            <div class="container">
+                <div class="row">
+                  <h2 style="color: rgb(255,255,23);text-shadow: 2px 2px #000000;"></br><b>Operating System Simulator</b></br></br></h2>
+                  <div class="col-md-6" style="font-size: 22px;">
+                    <b style="font-size: 25px;">Concepts demonstrated</b></br>
+                    <li>Process scheduling</li>
+                    <li>Process synchronization</li>
+                    <li>Banker's algorithm</li>
+                    <li>Memory management</li>
+                    <li>Page replacement</li>
+                    <li>Disk scheduling</li>
+                    <li>File allocation</li>
+                    <li>File management</li>
+                    <li>Thread Synchronization</li>
+                    <li>System Calls</li>
+                    <li>Inter-Process Communication</li>
+                  </div>
+                  <div class="col-md-6" style="font-size: 22px;">
+                    <b style="font-size: 25px;">Team Members</b></br>
+                    <ol>
+                      <li>Mohammad Aadil Shabier (211CS141)</li>
+                      <li>Muskan (211CS142)</li>
+                      <li>Nancy Kumari (211CS143)</li>
+                      <li>Prince Kumar Chaudhary (211CS144)</li>
+                      <li>Rahul Dogra (211CS145)</li>
+                      <li>Ridhisha Hede (211CS146)</li>
+                      <li>Sai Anil Poreddiwar (211CS148)</li>
+                      <li>Sailada Sowjanya (211CS149)</li>
+                    </ol>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: 1 Row 2 Columns -->
+      </div>
+    </section>
+
+    <section id="pschedule" class="features" style="background-color: #000000;height: 965px;">
+        <div class="container" style="color: rgb(255,255,255);">
+          <div class="my-auto">
+            <h2 class="mb-5">Process Scheduling</h2>
+            <div class="resume-item d-flex flex-column flex-md-row">
+              <div class="resume-content mr-auto">
+                <p>The process scheduling is the activity of the process manager that handles the removal of the running process from the CPU and the selection of another process on the basis of a particular strategy.Process scheduling is an essential part of a Multiprogramming operating systems. Such operating systems allow more than one process to be loaded into the executable memory at a time and the loaded process shares the CPU using time multiplexing.
+                </p>
+                <div class="subheading mb-2">Following Problems are demonstrated in the simulator :
+                </div>
+                <ol>
+                  <li>Shortest Job First</li>
+                  <li>First Come First Served</li>
+                  <li>Round Robin</li>
+                  <li>Priority Scheduling</li>
+                </ol>
+                <div class="row">
+                  <a href="Process Scheduling/src/sjf.html" class="btn btn-outline-success col-md-3">Shortest Job First</a>&emsp;
+                  <a href="Process Scheduling/src/fcfs.html" class="btn btn-outline-success col-md-3">First Come First Served</a>&emsp;
+                </div>
+                <br>
+                <div class="row">
+                  <a href="Process Scheduling/src/rr.html" class="btn btn-outline-success col-md-3">Round Robin</a>&emsp;
+                  <a href="Process Scheduling/src/priority.html" class="btn btn-outline-success col-md-3">Priority Scheduling</a>&emsp;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="psync" class="cta" style="background-color: rgb(119, 17, 17);height: 965px;">
+        <div class="container" style="color: white;">
+            <h2 class="mb-5">Process Synchronization</h2>
+            <div class="resume-item d-flex flex-column flex-md-row">
+              <div class="resume-content mr-auto">
+                <p>Process Synchronization means sharing system resources by processes in a such a way that, concurrent access to shared data is handled thereby minimizing the chance of inconsistent data. Maintaining data consistency demands mechanisms to ensure synchronized execution of cooperating processes.
+                </p>
+                <div class="subheading mb-2">The following Problems are demonstrated in the simulator :
+                </div>
+                <ol>
+                  <li>Producer Consumer Problem</li>
+                  <li>Reader - Writer Problem</li>
+                  <li>Dining Philosopher Problem</li>
+                </ol>
+                  <div class="row">
+                <a class="btn btn-outline-success col-md-4" href="Process Synchronization/pc_wiki.html">Producer Consumer Problem</a>
+                <a class="btn btn-outline-success col-md-4" href="Process Synchronization/rw_wiki.html">Reader Writer Problem</a>
+                <a class="btn btn-outline-success col-md-4" href="Process Synchronization/dining_wiki.html">Dining Philosopher Problem</a>
+              </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section id="bankers" class="cta" style="background-color: rgba(0, 0, 0, 0.54);height: 965px;">
+        <div class="container">
+          <h2 class="mb-5">Banker's Algorithm</h2>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <p>The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue.
+              </p>
+              <div class="row">
+              <a class="btn btn-dark btn-outline-success col-md-3" href="Bankers/banker.html">Demonstration</a>
+              </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="memmanage" class="cta" style="background-color: rgb(192, 209, 0);height: 965px;">
+        <div class="container">
+          <h2 class="mb-5">Memory Management</h2>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <p>The memory management function keeps track of the status of each memory location, either allocated or free. It determines how memory is allocated among competing processes, deciding which gets memory, when they receive it, and how much they are allowed. When memory is allocated it determines which memory locations will be assigned. It tracks when memory is freed or unallocated and updates the status.
+              </p>
+              <div class="subheading mb-2">Following methods are demonstrated in the simulator:
+              </div>
+              <ol>
+                <li>MFT</li>
+                <li>MVT</li>
+              </ol>
+              <div class="row">
+                <a class="btn btn-dark col-md-4" href="MFT/index.html">Simulation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="pagerepl" class="cta"style="background-color: rgba(42, 98, 134, 1);height: 965px;">
+        <div class="container">
+          <font color='white'>
+          <h2 class="mb-5">Page Replacement Techniques</h2>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+               <p>The page replacement algorithm decides which memory page is to be replaced. Page replacement is done when the requested page is not found in
+                 the main memory (page fault).</p>
+              <div class="subheading mb-2">Following Problems are demonstrated in the simulator :
+              </div>
+              <p>1. Least Recently Used (LRU)<br>
+                2. Optimal<br>
+                3. FIFO<br>
+              </p>
+              <div class="row">
+              <a class="btn btn-outline-success col-md-4" href="PageReplacement/index.html">Page Replacement</a>
+               </div>
+
+		    <div class="subheading mb-2">wiki:
+
+                  <div class="row">
+                    <a class="btn btn-outline-success col-md-4" href="PageReplacement/wiki.html">wiki</a></button>
+                </div>
+                </font>
+           </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+    </section>
+    <section id="diskschedule" class="cta" style="background-color: rgb(25,17,57);height: 965px;">
+        <div class="container">
+          <font color='white'>
+          <h2 class="mb-5">Disk Scheduling Algorithms</h2>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+		<p>Disk scheduling is the method that computer operating systems use to decide in which order the block I/O operations will be submitted to storage volumes. I/O scheduling is sometimes called disk scheduling.
+              </p>
+              <div class="row">
+              <a class="btn btn-outline-success col-md-4" href="Disk/disk.html">Demonstration</a>
+          </div>
+
+        </div>
+        </div>
+        </div>
+      </font>
+    </section>
+    <section id="filealloc" class="cta" style="height: 965px;background-color: rgba(255,255,255,0.5);">
+        <div class="container">
+          <div class="my-auto">
+            <h2 class="mb-5">File Allocation Techniques</h2>
+            <div class="resume-item d-flex flex-column flex-md-row">
+              <div class="resume-content mr-auto">
+                The allocation method defines how the files are stored in the disk blocks.
+                The direct access nature of the disks gives us the flexibility to implement the files.
+                In many cases, different files or many files are stored on the same disk. The main problem
+                that occurs in the operating system is that how we allocate the spaces to these files so that
+                the utilization of disk is efficient and the quick access to the file is possiblets advantages
+                and disadvantages.<br>
+                The main idea behind contiguous allocation methods is to provide:
+                <ul>
+                  <li>Efficient disk space utililization</li>
+                  <li>Fast access to the file blocks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <a class="btn btn-primary col-md-4" href="FileAllocationAlgorithms/contiguous.html">Contiguous File Allocation</a>&emsp;
+            <a class="btn btn-primary col-md-4" href="FileAllocationAlgorithms/linked.html">Linked File Allocation</a>
+          </div>
+        </div>
+    </section>
+
+    <section id="threadsync" class="cta" style="height: 965px;background-color: rgba(85, 16, 145, 0.5);">
+      <div class="container">
+        <div class="my-auto">
+          <h2 class="mb-5">Thread Synchronization</h2>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <p>Thread synchronization is a way of programming several threads to carry out independent tasks easily.
+                It is capable of controlling access to multiple threads to a particular shared resource.</p>
+          </div>
+        </div>
+        <div class="row">
+          <a class="btn btn-secondary col-md-4" href="ThreadSync/threadsync.html">Demonstration</a>
+        </div>
+      </div>
+  </section>
+
+    <section id="filemanage" class="cta" style="background-color: rgb(249,221,22);height: 965px;">
+        <div class="container">
+          <div class="my-auto">
+            <h2 class="mb-5">File Management</h2>
+            <div class="resume-item d-flex flex-column flex-md-row">
+              <div class="resume-content mr-auto">
+
+                <p> File System represents data from a logical point of view. The different directory structures for the file systems are:
+                <br>
+                1. Single-Level Directory
+                <br>
+                2. Two-Level Directory
+                <br>
+                3. Multi-Level Directory
+                <br>
+                </p>
+            <p>Some more details here</p>
+              <p class="lead">
+                <a class="btn btn-success" href="https://en.wikipedia.org/wiki/File_system" role="button">Wiki</a>
+              </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <a class="btn btn-secondary col-md-4" href="File_System/single_level_directory.html">Single-Level Directory</a>&emsp;
+            <a class="btn btn-secondary col-md-4" href="File_System/two_level_directory.html">Two-Level Directory</a>
+          </div>
+          </br>
+          <div class="row">
+               <a class="btn btn-secondary col-md-4" href="File_System/tree_directory.html">Multi-Level Directory</a>
+          </div>
+        </div>
+    </section>
+
+    <section id="syscalls" class="cta" style="height: 965px;background-color: rgb(9, 97, 43);">
+      <div class="container" style="color: white;">
+        <div class="my-auto">
+          <h2 class="mb-5">System Calls</h2>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <p>A system call is a procedure that provides the interface between a process and the operating system.
+                It is the way by which a computer program requests a service from the kernel of the operating system.</p>
+          </div>
+        </div>
+        <div class="row">
+          <a class="btn btn-secondary col-md-4" href="SystemCalls/index.html">Wiki</a>
+        </div>
+      </div>
+  </section>
+
+  <section id="ipc" class="cta" style="height: 965px;background-color: rgb(182, 106, 34);">
+    <div class="container" style="color: rgb(0, 0, 0);">
+      <div class="my-auto">
+        <h2 class="mb-5">Inter Process Communication</h2>
+        <div class="resume-item d-flex flex-column flex-md-row">
+          <div class="resume-content mr-auto">
+            <p>Inter-process communication (IPC) is a mechanism that allows processes to
+              communicate with each other and synchronize their actions.</p>
+        </div>
+      </div>
+      <div class="row">
+        <a class="btn btn-dark col-md-4" href="IPC/sharedmemory.html">Shared Memory Simulation</a>
+      </div>
+    </div>
+</section>
+
+  <footer></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="Index/assets/js/script.min.js"></script>
+</body>
+
+</html>

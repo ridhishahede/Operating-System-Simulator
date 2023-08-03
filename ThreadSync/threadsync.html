@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thread Synchronization</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../Index/assets/bootstrap/css/bootstrap.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #outputPanel {
+      background-color: #f5f5f5;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    #outputText {
+      white-space: pre-wrap;
+      font-size: 14px;
+    }
+
+    #inputPanel {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="../index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+  <br>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Thread Synchronization</h1>
+    </div>
+  
+    <div class="jumbotron">
+      <div id="inputPanel">
+        <h3>Enter problem inputs:</h3>
+        <label for="inputThreadCount">Thread Count:</label>
+        <input type="number" id="inputThreadCount">
+    
+        <label for="inputOperation">Operation:</label>
+        <select id="inputOperation">
+          <option value="read">Read</option>
+          <option value="write">Write</option>
+        </select>
+    
+        <label for="inputData">Data:</label>
+        <textarea id="inputData"></textarea>
+    
+        <button id="solveBtn">Solve</button>
+      </div>  
+    </div>
+
+    <div class="jumbotron">
+      <div id="outputPanel">
+        <h3 class="display-5">Output:</h3>
+        <pre id="outputText"></pre>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function appendOutput(message) {
+      const outputText = document.getElementById('outputText');
+      outputText.textContent += message + '\n';
+    }
+
+    function solveThreadSync() {
+      const threadCount = parseInt(document.getElementById('inputThreadCount').value);
+      const operation = document.getElementById('inputOperation').value;
+      const data = document.getElementById('inputData').value;
+
+      // Perform the thread synchronization logic based on the user inputs
+      appendOutput(`Thread Count: ${threadCount}`);
+      appendOutput(`Operation: ${operation}`);
+      appendOutput(`Data: ${data}`);
+      
+      // Add your thread synchronization code here
+      
+      // Example code to simulate threads running
+      for (let i = 1; i <= threadCount; i++) {
+        appendOutput(`Thread ${i}: Entered critical section`);
+        // Perform operations that require synchronization
+        appendOutput(`Thread ${i}: Released mutex lock`);
+      }
+    }
+
+    document.getElementById('solveBtn').addEventListener('click', solveThreadSync);
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <title>System Calls</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="../index.html#syscalls">Home</a>
+    </nav>
+    <div class="container">
+    <h1 class="display-3">System calls</h1>
+    <p>A system call is a procedure that provides the interface between a process and the operating
+        system. It is the way by which a computer program requests a service from the kernel of the
+        operating system.</p>
+    <h3 class="display-5">Process Control</h3>
+    <p>These system calls deal with processes such as process creation, process termination etc. The
+        Windows System calls under this are Createprocess(),Exitprocess(). The Linux System calls
+        under this are mentioned below </p>
+    <ol type="1">
+        <li>fork() </li>
+        <ol type="i">
+            <li>A new process is created by the fork() system call</li>
+            <li>A new process may be created with fork() without a new program being run-the new
+                subprocess simply continues to execute exactly the same program that the first (parent)
+                process was running. </li>
+            <li>It is one of the most widely used system calls under process management.</li>
+        </ol>
+        <li>exit() </li>
+        <ol type="i">
+            <li>The exit() system call is used by a program to terminate its execution.</li>
+            <li>The operating system reclaims resources that were used by the process after the exit()
+                system call. </li>
+        </ol>
+        <li>exec()</li>
+        <ol type="i">
+            <li>A new program will start executing after a call to exec(). </li>
+            <li>Running a new program does not require that a new process be created first: any process may
+                call exec() at any time. The currently running program is immediately terminated, and the new
+                program starts executing in the context of the existing process.</li>
+        </ol>
+        <li>wait() </li>
+        <ol type="i">
+            <li>wait for single object. A call to wait() blocks the calling process until one of its child processes
+                exits or a signal is received. After child process terminates, parent continues its execution after
+                wait system call.
+                </li>
+        </ol>
+        <li>clear()</li>
+        <ol type="i">
+            <p>clearing out the terminal. clear is a standard Unix computer operating system command that is
+                used to clear the terminal screen.<br>
+                This command first looks for a terminal type in the environment and after that, it figures out
+                the terminfo database for how to clear the screen. And this command will ignore any
+                command-line parameters that may be present. Also, the clear command doesn’t take any
+                argument and it is almost similar to cls command on a number of other Operating Systems.</p>
+        </ol>
+        <li>kill() </li>
+        <p> kill the terminal/terminate and close all the files.</p>
+    </ol>
+    <h3 class="display-5">File Structure</h3>
+    <ol type="1">
+        <li>open()</li>
+        <ol type="i">
+            <li>Opens a file and returns a file descriptor.</li>
+            <li>Arguments: Filename to open, mode (read-only, write-only, read-write), permissions (if
+                creating a new file). </li>
+            <li>Return type: A file descriptor, or -1 if an error occurs. </li>
+        </ol>
+        <li>read()</li>
+        <ol type="i">
+            <li>Followed by the file name to display its contents. This system call is used to read data from a
+                file. 4 </li>
+            <li>It takes three arguments, the first is the file descriptor, the second is a buffer where the data
+                will be stored, and the third is the number of bytes to read. </li>
+        </ol>
+        <li>write()</li>
+        <ol type="i">
+            <li>This system call is used to write data to a file.</li>
+            <li> It takes three arguments, the first is the file descriptor, the second is a buffer containing the
+                data to be written, and the third is the number of bytes to be written.</li>
+        </ol>
+        <li>close() </li>
+        <ol type="i">
+            <li>This system call is used to close a file. </li>
+            <li>It takes a file descriptor as an argument and releases the resources associated with the file
+                descriptor</li>
+        </ol>
+    </ol>
+    <h2 class="display-5">Difference Between Linux and Windows OS</h2>
+    <img src="Screenshot 2023-05-28 205102.png" height="500px">
+    
+    <h2 class="display-5">Difference Between Linux and Windows OS based on Security Issues</h2>
+    <img src="Screenshot 2023-05-28 205554.png" height="500px">
+    <h2 class="display-5">Difference Between Linux and Windows OS based on Scheduling Algorthims</h2>
+    <img src="Screenshot 2023-05-28 205808.png" height="500px">
+    </div>
+</body>
+</html>
